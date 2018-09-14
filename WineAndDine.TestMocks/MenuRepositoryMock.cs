@@ -50,9 +50,9 @@ namespace WineAndDine.TestMocks
             //Belvedere
             m = new Menu
             {
-                Id = 1,
+                Id = 2,
                 RestaurantId = 1,
-                Name = "Restoran Mece Meni",
+                Name = "Belvedere Meni",
                 Items = new List<MenuItem>(),
             };
 
@@ -80,22 +80,22 @@ namespace WineAndDine.TestMocks
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            StaticRepository.Menus.RemoveAll(x => x.Id == id);
         }
 
         public void Delete(Menu entity)
         {
-            throw new NotImplementedException();
+            Delete(entity.Id);
         }
 
         public List<Menu> GetAll()
         {
-            throw new NotImplementedException();
+            return StaticRepository.Menus;
         }
 
         public void Insert(Menu entity)
         {
-            throw new NotImplementedException();
+            StaticRepository.Menus.Add(entity);
         }
     }
 }
