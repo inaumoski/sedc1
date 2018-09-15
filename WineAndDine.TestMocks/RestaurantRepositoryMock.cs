@@ -28,22 +28,28 @@ namespace WineAndDine.TestMocks
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            StaticRepository.Restaurants.RemoveAll(x => x.Id == id);
         }
 
         public void Delete(Restaurant entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+            {
+                return;
+            }
+            StaticRepository.Restaurants.RemoveAll(x => x.Id == entity.Id);
         }
 
         public List<Restaurant> GetAll()
         {
-            throw new NotImplementedException();
+            return StaticRepository.Restaurants;
         }
 
         public void Insert(Restaurant entity)
         {
-            throw new NotImplementedException();
+            int maxId = StaticRepository.Restaurants.Max(x => x.Id);
+            entity.Id = maxId + 1;
+            StaticRepository.Restaurants.Add(entity);
         }
     }
 }

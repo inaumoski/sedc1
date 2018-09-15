@@ -12,6 +12,7 @@ namespace WineAndDIne.Controllers
     {
         private readonly IRestaurantManagement _restaurantManagement;
         private readonly ILogger _logger;
+
         // GET: Restaurant
         public ActionResult Index()
         {

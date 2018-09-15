@@ -8,6 +8,10 @@ namespace WineAndDine.BL.Models
 {
     public class Menu
     {
+        public Menu()
+        {
+            Items = new List<MenuItem>();
+        }
         public int Id { get; set; }
         public List<MenuItem> Items { get; set; }
 

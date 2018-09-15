@@ -51,7 +51,7 @@ namespace WineAndDine.TestMocks
             m = new Menu
             {
                 Id = 2,
-                RestaurantId = 1,
+                RestaurantId = 2,
                 Name = "Belvedere Meni",
                 Items = new List<MenuItem>(),
             };
@@ -85,6 +85,10 @@ namespace WineAndDine.TestMocks
 
         public void Delete(Menu entity)
         {
+            if(entity == null)
+            {
+                return;
+            }
             Delete(entity.Id);
         }
 
@@ -95,6 +99,8 @@ namespace WineAndDine.TestMocks
 
         public void Insert(Menu entity)
         {
+            int maxId = StaticRepository.Restaurants.Max(x => x.Id);
+            entity.Id = maxId + 1;
             StaticRepository.Menus.Add(entity);
         }
     }

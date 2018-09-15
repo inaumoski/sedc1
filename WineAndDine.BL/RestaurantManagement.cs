@@ -12,17 +12,28 @@ namespace WineAndDine.BL
     public class RestaurantManagement : IRestaurantManagement
     {
         private readonly IMenuRepository _menuRepository;
-        public RestaurantManagement
-            (
-                IMenuRepository menuRepository
+        private readonly IRestaurantRepository _restaurantRepository;
+        private readonly ILogger _logger;
+
+        public RestaurantManagement(IMenuRepository menuRepository
+            , ILogger logger
+            , IRestaurantRepository restaurantRepository
             )
         {
             _menuRepository = menuRepository;
-
+            _logger = logger;
+            _restaurantRepository = restaurantRepository;
         }
+
+
         public void AddMenu(Menu menu)
         {
             _menuRepository.Insert(menu);
+        }
+
+        public void AddRestaurant(Restaurant restaurant)
+        {
+            
         }
 
         public List<MenuItem> GetItemsByMenu(int menuId)
@@ -43,7 +54,7 @@ namespace WineAndDine.BL
 
         public List<Restaurant> GetRestaurants()
         {
-            throw new NotImplementedException();
+            return _restaurantRepository.GetAll();
         }
 
         public List<Restaurant> GetRestaurantsByLocation(string location)

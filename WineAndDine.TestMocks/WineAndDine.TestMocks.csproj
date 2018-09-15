@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logger2Mock.cs" />
     <Compile Include="LoggerMock.cs" />
     <Compile Include="MenuRepositoryMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

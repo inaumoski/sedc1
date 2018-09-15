@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WineAndDine.BL.ContractInterfaces\WineAndDine.BL.ContractInterfaces.csproj">
+      <Project>{a0321458-2603-4ac1-b27c-f41538ec0020}</Project>
+      <Name>WineAndDine.BL.ContractInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WineAndDine.BL.Models\WineAndDine.BL.Models.csproj">
+      <Project>{1501c9e1-988d-4fed-8086-37ab95734070}</Project>
+      <Name>WineAndDine.BL.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

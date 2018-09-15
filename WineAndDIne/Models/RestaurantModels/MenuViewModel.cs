@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using WineAndDine.BL.Models;
 
 namespace WineAndDIne.Models
@@ -15,6 +16,7 @@ namespace WineAndDIne.Models
         public MenuViewModel()
         {
             Items = new List<MenuItemViewModel>();
+            AllRestaurants = new List<SelectListItem>();
         }
         public int Id { get; set; }
 
@@ -72,6 +74,8 @@ namespace WineAndDIne.Models
 
             return vmList;
         }
+
+        public List<SelectListItem> AllRestaurants { get; set; }
 
     }
 }
