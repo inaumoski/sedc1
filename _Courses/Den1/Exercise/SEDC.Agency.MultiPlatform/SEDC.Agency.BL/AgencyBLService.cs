@@ -58,6 +58,7 @@ namespace SEDC.Agency.BL
             catch (Exception ex)
             {
                 _logRepository.LogError(ex);
+                throw;
             }
         }
     }

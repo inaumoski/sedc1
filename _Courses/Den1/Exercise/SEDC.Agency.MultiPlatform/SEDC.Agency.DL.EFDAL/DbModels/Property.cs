@@ -18,7 +18,9 @@ namespace SEDC.Agency.DL.EFDAL
 
         public decimal PriceSale { get; set; }
 
-        //public DateTime DateCreated { get; set; }
+
+        //01.01.0001
+        public DateTime DateCreated { get; set; }
 
         public bool IsDeleted { get; set; }
 

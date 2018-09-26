@@ -9,7 +9,7 @@ namespace SEDC.Agency.DL.EFDAL
 {
     public class EFDataRepository : IDataRepository
     {
-        private AgencyContext context = new AgencyContext();
+        private AgencyContext context = new AgencyContext("Agency");
         public List<BL.Models.Property> GetAllProperties()
         {
             var list = context.Properties

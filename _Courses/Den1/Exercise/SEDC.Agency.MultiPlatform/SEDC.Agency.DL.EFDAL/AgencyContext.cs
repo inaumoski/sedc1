@@ -10,6 +10,10 @@ namespace SEDC.Agency.DL.EFDAL
 {
     public class AgencyContext : DbContext
     {
+        public AgencyContext(string connectionString)
+            : base(connectionString)
+        { }
+
         public DbSet<Property> Properties { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
