@@ -103,6 +103,10 @@
       <Project>{76a69e7b-683d-40ad-a5f3-036a1a2c8873}</Project>
       <Name>SEDC.Agency.DL.CsvDataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SEDC.Agency.DL.EFDAL\SEDC.Agency.DL.EFDAL.csproj">
+      <Project>{533a2be2-1099-4555-8c37-21b89362d1ce}</Project>
+      <Name>SEDC.Agency.DL.EFDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data.txt" />

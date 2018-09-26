@@ -3,6 +3,7 @@ using SEDC.Agency.BL;
 using SEDC.Agency.BL.Interfaces;
 using SEDC.Agency.BL.Interfaces.DataAccess;
 using SEDC.Agency.DL.CsvDataAccess;
+using SEDC.Agency.DL.EFDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace SEDC.Agency.WinForms
         {
             //Bind<IMailSender>().To<MockMailSender>();
             //
-            Bind<IDataRepository>().To<CsvDataRepository>();
+            Bind<IDataRepository>().To<EFDataRepository>();
             Bind<ILoggingRepository>().To<Log2>();
 
 
