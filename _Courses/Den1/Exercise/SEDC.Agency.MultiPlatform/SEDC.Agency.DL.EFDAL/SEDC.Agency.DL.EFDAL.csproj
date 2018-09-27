@@ -62,10 +62,17 @@
       <Project>{8d2cd0fd-3706-4ab7-bab7-91198f8da00c}</Project>
       <Name>SEDC.Agency.BL.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SEDC.Agency.Common\SEDC.Agency.Common.csproj">
+      <Project>{d59210bd-2492-46f1-98ed-b665d747d985}</Project>
+      <Name>SEDC.Agency.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConfigurationMaps\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

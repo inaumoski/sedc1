@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEDC.Agency.Common;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -10,6 +11,11 @@ namespace SEDC.Agency.DL.EFDAL
 {
     public class AgencyContext : DbContext
     {
+        public AgencyContext() 
+            : base(AppConfig.ConnectionStringName)
+        {
+        }
+
         public AgencyContext(string connectionString)
             : base(connectionString)
         { }
